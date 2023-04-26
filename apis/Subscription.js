@@ -8,7 +8,7 @@ router.post('/emailsubscription', async function(req, res){
     if( req.body.token === process.env.API_TOKEN ){
         const emailBody = `
                 <h2> Subscription Email </h2>
-                Email : ${req.body.name} <br />
+                Email : ${req.body.email} <br />
         `;
         const from      = process.env.EMAIL_TO
         const to        = process.env.EMAIL_FROM
